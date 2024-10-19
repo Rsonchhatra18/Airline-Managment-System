@@ -2,16 +2,17 @@
 #define PERSON_H
 
 #include <string>
-using namespace std;
 
-class Person {
+class Person
+{
 protected:
-    string name;
+    std::string name;
     int age;
 
 public:
-    Person(string n, int a);
-    virtual void displayInfo() const = 0; // Pure virtual function for displaying info
+    Person(std::string n, int a);
+    virtual void displayInfo() const = 0; // Pure virtual function for polymorphism
+    virtual ~Person() {}                  // Virtual destructor
 };
 
 #endif

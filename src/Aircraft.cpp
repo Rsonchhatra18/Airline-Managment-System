@@ -1,16 +1,23 @@
 #include "Aircraft.h"
 #include <iostream>
 
-Aircraft::Aircraft(string id, string m, int capacity) : aircraftID(id), model(m), seatingCapacity(capacity), maintenanceSchedule("None") {}
+Aircraft::Aircraft(std::string id, std::string m, int capacity)
+    : aircraftID(id), model(m), seatingCapacity(capacity) {}
 
-void Aircraft::scheduleMaintenance(string date) {
-    maintenanceSchedule = date;
+void Aircraft::displayAircraftInfo()
+{
+    std::cout << "Aircraft ID: " << aircraftID
+              << ", Model: " << model
+              << ", Seating Capacity: " << seatingCapacity << std::endl;
 }
 
-void Aircraft::displayAircraftInfo() {
-    cout << "Aircraft ID: " << aircraftID << ", Model: " << model << ", Seating Capacity: " << seatingCapacity << ", Maintenance: " << maintenanceSchedule << endl;
-}
-
-int Aircraft::getCapacity() const {
+int Aircraft::getCapacity() const
+{
     return seatingCapacity;
+}
+
+// Getter for aircraft ID
+std::string Aircraft::getAircraftID() const
+{
+    return aircraftID;
 }
