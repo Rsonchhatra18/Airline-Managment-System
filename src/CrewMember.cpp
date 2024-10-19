@@ -1,8 +1,13 @@
 #include "CrewMember.h"
 #include <iostream>
 
-CrewMember::CrewMember(string n, int a, string empID, string r) : Person(n, a), employeeID(empID), role(r) {}
+CrewMember::CrewMember(std::string n, int a, std::string empID, std::string r)
+    : Person(n, a), employeeID(empID), role(r) {}
 
-void CrewMember::displayInfo() const {
-    cout << "Crew Member: " << name << ", Age: " << age << ", Employee ID: " << employeeID << ", Role: " << role << endl;
+void CrewMember::displayInfo() const
+{
+    std::cout << "Crew Member: " << name
+              << ", Age: " << age
+              << ", Employee ID: " << employeeID
+              << ", Role: " << role << std::endl;
 }

@@ -4,15 +4,16 @@
 #include "Passenger.h"
 #include "Flight.h"
 
-class Booking {
+class Booking
+{
 private:
-    string bookingID;
-    Passenger passenger;
-    Flight* flight;
+    std::string bookingID;
+    Passenger &passenger;
+    Flight *flight;
 
 public:
-    Booking(string bID, Passenger& p, Flight* f);
-    void confirmBooking(string seatNumber);
+    Booking(std::string bID, Passenger &p, Flight *f);
+    void confirmBooking(std::string seatNumber);
     void displayBookingInfo();
 };
 

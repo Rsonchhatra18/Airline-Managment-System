@@ -3,14 +3,16 @@
 
 #include "Person.h"
 
-class CrewMember : public Person {
+class CrewMember : public Person
+{
 private:
-    string employeeID;
-    string role;
+    std::string employeeID;
+    std::string role;
 
 public:
-    CrewMember(string n, int a, string empID, string r);
+    CrewMember(std::string n, int a, std::string empID, std::string r);
     void displayInfo() const override;
+    virtual ~CrewMember() {} // Virtual destructor
 };
 
 #endif

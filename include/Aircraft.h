@@ -2,20 +2,21 @@
 #define AIRCRAFT_H
 
 #include <string>
-using namespace std;
 
-class Aircraft {
+class Aircraft
+{
 private:
-    string aircraftID;
-    string model;
+    std::string aircraftID;
+    std::string model;
     int seatingCapacity;
-    string maintenanceSchedule;
 
 public:
-    Aircraft(string id, string m, int capacity);
-    void scheduleMaintenance(string date);
+    Aircraft(std::string id, std::string m, int capacity);
     void displayAircraftInfo();
     int getCapacity() const;
+
+    // Getter for aircraft ID
+    std::string getAircraftID() const; // Add this line
 };
 
 #endif

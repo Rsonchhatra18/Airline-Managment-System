@@ -3,15 +3,17 @@
 
 #include "Person.h"
 
-class Passenger : public Person {
+class Passenger : public Person
+{
 private:
-    string passportNumber;
-    string seatNumber;
+    std::string passportNumber;
+    std::string seatNumber;
 
 public:
-    Passenger(string n, int a, string pNo);
-    void assignSeat(string seat);
+    Passenger(std::string n, int a, std::string pNo);
+    void assignSeat(std::string seat);
     void displayInfo() const override;
+    virtual ~Passenger() {} // Virtual destructor
 };
 
 #endif
