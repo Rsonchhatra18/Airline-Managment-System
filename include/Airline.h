@@ -1,27 +1,27 @@
 #ifndef AIRLINE_H
 #define AIRLINE_H
 
-#include <vector>
 #include <string>
-#include "Flight.h"
+#include <vector>
 #include "Aircraft.h"
+#include "Flight.h"
 
 class Airline
 {
 private:
     std::string airlineName;
-    std::vector<Flight *> flights;
     std::vector<Aircraft *> aircrafts;
+    std::vector<Flight *> flights;
 
 public:
     Airline(std::string name);
-    void addFlight(Flight *flight);
-    void addAircraft(Aircraft *ac);
-    void displayAirlineInfo();
 
-    // Getter methods to access the aircraft and flight lists
-    const std::vector<Aircraft *> &getAircrafts() const; // Return list of aircrafts
-    const std::vector<Flight *> &getFlights() const;     // Return list of flights
+    void addAircraft(Aircraft *aircraft);
+    void addFlight(Flight *flight);
+    void displayAirlineInfo() const;
+
+    std::vector<Aircraft *> getAircrafts() const;
+    std::vector<Flight *> getFlights() const;
 };
 
-#endif
+#endif // AIRLINE_H

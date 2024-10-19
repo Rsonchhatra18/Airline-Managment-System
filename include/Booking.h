@@ -1,6 +1,7 @@
 #ifndef BOOKING_H
 #define BOOKING_H
 
+#include <string>
 #include "Passenger.h"
 #include "Flight.h"
 
@@ -17,4 +18,4 @@ public:
     void displayBookingInfo();
 };
 
-#endif
+#endif // BOOKING_H

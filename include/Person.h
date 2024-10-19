@@ -10,9 +10,12 @@ protected:
     int age;
 
 public:
-    Person(std::string n, int a);
-    virtual void displayInfo() const = 0; // Pure virtual function for polymorphism
-    virtual ~Person() {}                  // Virtual destructor
+    Person(std::string name, int age);
+
+    std::string getName() const;
+    int getAge() const;
+
+    virtual void displayInfo() const;
 };
 
-#endif
+#endif // PERSON_H
