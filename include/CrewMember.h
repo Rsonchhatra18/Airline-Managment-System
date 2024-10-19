@@ -1,6 +1,7 @@
 #ifndef CREWMEMBER_H
 #define CREWMEMBER_H
 
+#include <string>
 #include "Person.h"
 
 class CrewMember : public Person
@@ -10,9 +11,9 @@ private:
     std::string role;
 
 public:
-    CrewMember(std::string n, int a, std::string empID, std::string r);
+    CrewMember(std::string name, int age, std::string employeeID, std::string role);
+
     void displayInfo() const override;
-    virtual ~CrewMember() {} // Virtual destructor
 };
 
-#endif
+#endif // CREWMEMBER_H

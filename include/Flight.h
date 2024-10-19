@@ -1,8 +1,8 @@
 #ifndef FLIGHT_H
 #define FLIGHT_H
 
-#include <vector>
 #include <string>
+#include <vector>
 #include "Passenger.h"
 #include "CrewMember.h"
 #include "Aircraft.h"
@@ -21,15 +21,19 @@ private:
 
 public:
     Flight(std::string fNum, std::string orig, std::string dest, std::string dTime, std::string aTime, Aircraft *ac);
+
     void addPassenger(Passenger &p);
     void assignCrew(CrewMember &cm);
-    void displayFlightInfo();
+    void displayFlightInfo() const;
 
-    // Getter method to access the list of passengers
+    std::string getFlightNumber() const;
+    std::string getOrigin() const;
+    std::string getDestination() const;
+    std::string getDepartureTime() const;
+    std::string getArrivalTime() const;
+    Aircraft *getAircraft() const;
     const std::vector<Passenger> &getPassengers() const;
-
-    // Getter for flight number
-    std::string getFlightNumber() const; // Add this line
+    const std::vector<CrewMember> &getCrew() const;
 };
 
-#endif
+#endif // FLIGHT_H

@@ -8,15 +8,16 @@ class Aircraft
 private:
     std::string aircraftID;
     std::string model;
-    int seatingCapacity;
+    int capacity;
 
 public:
-    Aircraft(std::string id, std::string m, int capacity);
-    void displayAircraftInfo();
+    Aircraft(std::string id, std::string model, int capacity);
+
+    std::string getAircraftID() const;
+    std::string getModel() const;
     int getCapacity() const;
 
-    // Getter for aircraft ID
-    std::string getAircraftID() const; // Add this line
+    void displayAircraftInfo() const;
 };
 
-#endif
+#endif // AIRCRAFT_H

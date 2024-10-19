@@ -1,41 +1,45 @@
 #include "Airline.h"
 #include <iostream>
 
+// Constructor
 Airline::Airline(std::string name) : airlineName(name) {}
 
+// Add an aircraft
+void Airline::addAircraft(Aircraft *aircraft)
+{
+    aircrafts.push_back(aircraft);
+}
+
+// Add a flight
 void Airline::addFlight(Flight *flight)
 {
     flights.push_back(flight);
 }
 
-void Airline::addAircraft(Aircraft *ac)
+// Display airline information
+void Airline::displayAirlineInfo() const
 {
-    aircrafts.push_back(ac);
-}
-
-void Airline::displayAirlineInfo()
-{
-    std::cout << "Airline: " << airlineName << std::endl;
-    std::cout << "Aircrafts: " << std::endl;
-    for (const auto &ac : aircrafts)
+    std::cout << "Airline: " << airlineName << "\n";
+    std::cout << "Aircraft List:\n";
+    for (const auto &aircraft : aircrafts)
     {
-        ac->displayAircraftInfo();
+        aircraft->displayAircraftInfo();
     }
-    std::cout << "Flights: " << std::endl;
+    std::cout << "\nFlights List:\n";
     for (const auto &flight : flights)
     {
         flight->displayFlightInfo();
     }
 }
 
-// Return the list of aircrafts
-const std::vector<Aircraft *> &Airline::getAircrafts() const
+// **Define getAircrafts()** — Return the list of aircrafts
+std::vector<Aircraft *> Airline::getAircrafts() const
 {
     return aircrafts;
 }
 
-// Return the list of flights
-const std::vector<Flight *> &Airline::getFlights() const
+// **Define getFlights()** — Return the list of flights
+std::vector<Flight *> Airline::getFlights() const
 {
     return flights;
 }
