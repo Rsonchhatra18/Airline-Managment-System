@@ -1,0 +1,28 @@
+/Airline-Management-System/
+│
+├── include/
+│   ├── updated_Aircraft.h
+│   ├── updated_Airline.h
+│   ├── updated_Booking.h
+│   ├── updated_CrewMember.h
+│   ├── updated_Flight.h
+│   ├── updated_Functionality.h
+│   ├── updated_Passenger.h
+│   ├── updated_Person.h
+│   └── updated_Utility.h
+│
+├── src/
+│   ├── updated_Aircraft.cpp
+│   ├── updated_Airline.cpp
+│   ├── updated_Booking.cpp
+│   ├── updated_CrewMember.cpp
+│   ├── updated_Flight.cpp
+│   ├── updated_Functionality.cpp
+│   ├── updated_main.cpp
+│   ├── updated_Passenger.cpp
+│   ├── updated_Person.cpp
+│   └── updated_Utility.cpp
+│
+├── main.exe 
+├── Dirctory.txt
+├── README.md (README file)
