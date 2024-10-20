@@ -6,10 +6,11 @@
 
 int main()
 {
+    std::cout << "+=====================================================+" << std::endl;
+    std::cout << "|           Airline Management System                 |" << std::endl;
+    std::cout << "+=====================================================+" << std::endl;
     std::string airlineName;
-    displaySeparator();
-    std::cout << "Welcome to Airline Management System\n";
-    displaySeparator();
+
     std::cout << "Enter Airline Name: ";
     std::getline(std::cin, airlineName);
 
@@ -19,14 +20,17 @@ int main()
     while (running)
     {
         displaySeparator();
-        std::cout << "\nAirline Management Menu:\n";
-        std::cout << "1. Add Aircraft\n";
-        std::cout << "2. Add Flight\n";
-        std::cout << "3. Add Passenger to Flight\n";
-        std::cout << "4. Add Crew Member to Flight\n";
-        std::cout << "5. Make a Booking\n";
-        std::cout << "6. View Airline Info\n";
-        std::cout << "7. Exit\n";
+        std::cout << "\t+===================================+\n";
+        std::cout << "  |     Airline Management Menu:      |\n";
+        std::cout << "  +-----------------------------------+ \n";
+        std::cout << "  |1. | Add Aircraft                  |\n";
+        std::cout << "  |2. | Add Flight                    |\n";
+        std::cout << "  |3. | Add Passenger to Flight       |\n";
+        std::cout << "  |4. | Add Crew Member to Flight     |\n";
+        std::cout << "  |5. | Make a Booking                |\n";
+        std::cout << "  |6. | View Airline Info             |\n";
+        std::cout << "  |7. | Exit                          |\n";
+        std::cout << "  +-----------------------------------+ \n";
         std::cout << "Enter your choice: ";
         int choice;
         std::cin >> choice;
@@ -51,6 +55,10 @@ int main()
                 if (flight->getFlightNumber() == flightNumber)
                 {
                     addPassenger(*flight);
+                }
+                else
+                {
+                    std::cout << "Flight not found!" << std::endl;
                 }
             }
             break;
